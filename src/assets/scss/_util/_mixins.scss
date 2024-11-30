@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import "variables";
+
+@mixin font($family, $name, $type, $weight){
+    $url: $base-url + 'font/' + $name + '.' + $type;
+
+    font-family: '#{$family}';
+    src: url($url) format($type);
+    font-weight: $weight;
+}
+
+@mixin bg($url, $pos:center, $size:cover){
+    background: url(#{$base-url}images/#{$url}) no-repeat $pos / $size;
+}
+
+@mixin icon($name, $pos:center, $size:100% auto, $color: $color-black){
+    mask: url(#{$base-url}images/icon/icon_#{$name}) no-repeat $pos / $size;
+    background-color: $color;
+}
+
+@mixin blind{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    border: 0;
+    z-index: -1;
+}

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+:root {
+    //default 변수
+    //color
+    --color-gray-0: #fff;
+    --color-gray-1: #f8f8f8;
+    --color-gray-2: #bbb;
+    --color-gray-3: #999;
+    --color-gray-4: #666;
+    --color-gray-5: #222;
+
+    //font-size
+    --font-small: 16px;
+    --font-medium: 20px;
+    --font-large: 32px;
+    --font-xlarge: 80px;
+    --font-xxlarge: 120px;
+
+    //line-height
+    --base-line-height: 1.4;
+
+    //letter-spacing
+    --base-letter-spacing: -0.25px;
+
+    //용도에 따른 값
+    --color-black: var(--color-gray-5);
+    --color-white: var(--color-gray-0);
+
+    //text-color
+    --color-text-bolder: var(--color-black);
+    --color-text-basic: var(--color-gray-4);
+    --color-text-light: var(--color-gray-3);
+    --color-text-white: var(--color-white);
+
+    //border-color
+    --color-border-basic: var(--color-gray-2);
+
+    //bg-color
+    --color-bg-white: var(--color-white);
+    --color-bg-gray: var(--color-gray-1);
+    --color-bg-gray-dark: var(--color-gray-5);
+
+    //text
+    --text-title-large: var(--font-xxlarge);
+    --text-title-medium: var(--font-xlarge);
+    --text-title-small: var(--font-large);
+
+    --text-body-large: var(--font-large);
+    --text-body-medium: var(--font-medium);
+    --text-body-small: var(--font-small);
+
+    --text-body-default: 10px;
+
+    //layout-gap
+    --gap-title-large-desc: 60px;
+    --gap-title-medium-cont: 60px;
+
+    --card-list-gap: 40px;
+    --card-list-category-pos: 20px;
+    --card-list--txt-padding-y: 30px;
+    --card-list-gap-title-desc: 20px;
+    --card-list-gap-desc-btn: 30px;
+
+    --tag-list-gap: 24px;
+
+    //section
+    --section-padding-x: 200px;
+
+    //content
+    --content-width: 1440px;
+    --content-padding-x: 28px;
+    --content-padding-x-mo: 16px;
+
+    //breakpoint
+    --breakpoint-mobile-small: 360px;
+    --breakpoint-mobile-medium: 600px;
+    --breakpoint-mobile-large: 768px;
+    --breakpoint-tablet: 1024px;
+    --breakpoint-tablet-large: 1280px;
+    --breakpoint-pc: 1920px;
+}

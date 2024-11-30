@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+//default
+html{
+    font-size: $body-fz;
+    font-weight: 400;
+    line-height: $line-height;
+    color: $base-color;
+
+    &[lang="ko-KR"], &[lang="ko"]{
+        font-family: $font-family-ko;
+    }
+    &[lang="en"], *[lang="en"]{
+        font-family: $font-family-en;
+    }
+}
+
+/* font */
+.tit{
+    &-l{
+        font-size: var(--text-title-large);
+    }
+    &-m{
+        font-size: var(--text-title-medium);
+    }
+    &-s{
+        font-size: var(--text-title-small);
+    }
+}
+.txt{
+    &-l{
+        font-size: var(--text-body-large);
+    }
+    &-m{
+        font-size: var(--text-body-medium);
+    }
+    &-s{
+        font-size: var(--text-body-small);
+    }
+}
+
+/* font-style */
+.bold{
+    font-weight: 700;
+}
+
+
+/* common */
+img{
+    width: 100%;
+}
+
+/* blind */
+.blind {
+    @include blind();
+}
