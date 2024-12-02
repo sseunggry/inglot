@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
-$fonts-style-ko: (Regular: 400, Medium: 500, Bold: 700);
-$fonts-style-en: (Regular: 400);
-$fonts-style-en-2: (Light: 300, Regular: 400, Medium: 500, Bold: 700);
+$fonts-style-ko: (Regular: 400, Medium: 500, SemiBold: 600, Bold: 700);
+$fonts-style-en: (Regular: 400, Bold: 700);
 
 @each $font, $weight in $fonts-style-ko{
     @font-face{
@@ -14,14 +13,6 @@ $fonts-style-en-2: (Light: 300, Regular: 400, Medium: 500, Bold: 700);
 @each $font, $weight in $fonts-style-ko{
     @font-face{
         @include font(#{$font-en}, '#{$font-en}-#{$font}', 'woff', #{$weight});
-        font-style: normal;
-    }
-}
-
-@each $font, $weight in $fonts-style-ko{
-    $font-family: $font-en-2;
-    @font-face{
-        @include font(#{$font-family}, '#{$font-family}-#{$font}', 'woff', #{$weight});
         font-style: normal;
     }
 }

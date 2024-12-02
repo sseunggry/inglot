@@ -46,11 +46,14 @@ html{
 
 
 /* common */
-img{
-    width: 100%;
+.pc-only{
+    display: block;
+}
+.mo-only{
+    display: none;
 }
 
 /* blind */
-.blind {
-    @include blind();
+.sr-only {
+    @include sr-only();
 }

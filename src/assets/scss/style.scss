@@ -7,3 +7,196 @@
 // 3. 배경 (background)
 // 4. 폰트 (font, color, letter-spacing, text-align, text-decoration, text-indent, vertical-align, white-space)
 // 5. 기타 (위에 언급되지 않은 나머지 속성들, 폰트의 관련 속성 이후에 선언하며, 기타 속성 내의 선언 순서는 무관함)
+
+.sec-tit{
+    margin-bottom: 50px;
+    font-family: 'Quattrocento', serif;
+    font-size: 60px;
+    color: #000;
+    text-align: center;
+}
+
+.sec-visual{
+    .tit-wrap{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+
+        .tit{
+            font-family: 'Quattrocento', serif;
+            font-size: 60px;
+        }
+        .desc{
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    }
+
+    .swiper-visual{
+        img{
+            width: 100%;
+        }
+        .swiper-pagination-fraction{
+            position: static;
+            display: flex;
+            align-items: center;
+            gap: 0 10px;
+            margin: 20px auto 0;
+            width: fit-content;
+            font-size: 14px;
+
+            .line{
+                display: inline-block;
+                width: 50px;
+                height: 1.5px;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.sec-product{
+    .product-list{
+        display: flex;
+        .item{
+            flex: 1;
+            border-right: 1px solid #f5f5f5;
+
+            &:last-of-type{
+                border-right-width: 0;
+            }
+
+            a{
+                display: block;
+            }
+
+            .img-wrap{
+                overflow: hidden;
+                position: relative;
+                margin: 0 auto 20px;
+                //width: 378px;
+
+                &::before{
+                    content: '';
+                    display: block;
+                    padding-top: 120%;
+                    width: 100%;
+                }
+
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+            .txt-wrap{
+                font-size: 18px;
+                text-align: center;
+
+                .desc{
+                    margin-top: 4px;
+                    font-size: 14px;
+                    color: #808080;
+                }
+
+                .price{
+                    margin-top: 12px;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+.sec-product-detail{
+    font-family: 'Quattrocento', serif;
+
+    img{
+        width: 100%;
+    }
+
+    .product-row{
+        display: flex;
+
+        .img-list{
+            display: flex;
+            width: 58%;
+
+            .img-wrap{
+                flex: 1;
+            }
+
+            .caption{
+                margin-top: 50px;
+                font-size: 14px;
+                color: #666;
+            }
+        }
+        .txt-pos{
+            position: absolute;
+            top: 180px;
+            right: 12%;
+            //margin: 216px 0 0 150px;
+            font-size: 36px;
+        }
+        .product-thumb{
+            margin-top: 400px;
+            margin-left: auto;
+            width: 20%;
+            //width: 354px;
+
+            a{
+                display: block;
+            }
+
+            .img-wrap{
+                //position: relative;
+                //height: 520px;
+                background-color: #f3f3f3;
+
+                //img{
+                //    position: absolute;
+                //}
+                //&::before{
+                //    content: '';
+                //    display: block;
+                //    width: 100%;
+                //    height: 516px;
+                //    background-color: #f3f3f3;
+                //}
+            }
+            .txt-wrap{
+                margin-top: -12%;
+                padding-left: 38px;
+
+                .tit{
+                    font-size: 48px;
+                }
+                .btn-more{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 36px;
+                    font-family: 'Pretendard', sans-serif;
+                    font-size: 18px;
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        margin-left: 2px;
+                        width: 14px;
+                        height: 14px;
+                        @include bg('common/ico_more.png');
+                    }
+                }
+            }
+        }
+    }
+}

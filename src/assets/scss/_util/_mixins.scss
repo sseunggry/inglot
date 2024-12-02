@@ -10,15 +10,15 @@
 }
 
 @mixin bg($url, $pos:center, $size:cover){
-    background: url(#{$base-url}images/#{$url}) no-repeat $pos / $size;
+    background: url('#{$base-url}images/#{$url}') no-repeat $pos / $size;
 }
 
 @mixin icon($name, $pos:center, $size:100% auto, $color: $color-black){
-    mask: url(#{$base-url}images/icon/icon_#{$name}) no-repeat $pos / $size;
+    mask: url('#{$base-url}images/icon/icon_#{$name}') no-repeat $pos / $size;
     background-color: $color;
 }
 
-@mixin blind{
+@mixin sr-only{
     overflow: hidden;
     position: relative;
     display: block;

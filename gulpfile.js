@@ -28,8 +28,8 @@ let paths = {
         dest: "./dist/assets/css/plugin"
     },
     img: {
-        src: "./src/assets/img/**/*",
-        dest: "./dist/assets/img"
+        src: "./src/assets/images/**/*",
+        dest: "./dist/assets/images"
     },
     js: {
         src: "./src/assets/js/**/*",

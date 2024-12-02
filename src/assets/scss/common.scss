@@ -1,2 +1,52 @@
 @charset "UTF-8";
 @import "./_base";
+
+.inner{
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1680px;
+    width: 100%;
+}
+
+.header{
+    padding: 24px 0;
+    background-color: #fff;
+
+    .inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        display: block;
+        width: 150px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .menu{
+        .btn-menu{
+            width: 28px;
+            height: 28px;
+            @include bg('common/ico_menu.png');
+        }
+        .menu-list{
+            display: none;
+        }
+    }
+}
+
+.sec{
+    position: relative;
+
+    + .sec{
+        margin-top: 150px;
+    }
+
+    &:last-of-type{
+        margin-bottom: 150px;
+    }
+}

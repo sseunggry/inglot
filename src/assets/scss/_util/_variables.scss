@@ -15,16 +15,14 @@ $line-height: var(--base-line-height);
 $base-line: calc($body-fz * 1.4);
 
 // 적용 웹 폰트
-$font-ko: 'NotoSansKR';
-$font-en: 'AbrilFatface';
-$font-en-2: 'Montserrat';
+$font-ko: 'Pretendard';
+$font-en: 'Quattrocento';
 
 $font-family-ko: $font-ko, sans-serif;
-$font-family-en: $font-en, $font-en-2, sans-serif;
+$font-family-en: $font-en, sans-serif;
 
-$notoSans: $font-ko, sans-serif;
-$abril: $font-en, sans-serif;
-$montserrat: $font-en-2, sans-serif;
+$pretend: $font-ko, sans-serif;
+$quatt: $font-en, sans-serif;
 
 //경로 url
 $base-url: '/assets/';
