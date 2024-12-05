@@ -57,3 +57,12 @@ html{
 .sr-only {
     @include sr-only();
 }
+
+@media (max-width: 768px) {
+    .pc-only{
+        display: none;
+    }
+    .mo-only{
+        display: block;
+    }
+}
