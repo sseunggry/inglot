@@ -2,7 +2,7 @@
 @import "variables";
 
 @mixin font($family, $name, $type, $weight){
-    $url: $base-url + 'font/' + $name + '.' + $type;
+    $url: $base-url + 'fonts/' + $name + '.' + $type;
 
     font-family: '#{$family}';
     src: url($url) format($type);
