@@ -219,7 +219,7 @@
 	top: 2rem;
 	right: -15.625rem;
 	display: block;
-	background: url("/assets/images/content/img_product_05_bg.png") no-repeat center/cover;
+	background: url("../images/content/img_product_05_bg.png") no-repeat center/cover;
 	width: 32.5rem;
 	height: 32.5rem;
 	z-index: -1;
@@ -230,7 +230,7 @@
 	top: 9.5rem;
 	left: 0;
 	display: block;
-	background: url("/assets/images/content/img_product_06_bg.png") no-repeat center/cover;
+	background: url("../images/content/img_product_06_bg.png") no-repeat center/cover;
 	width: 10rem;
 	height: 28.375rem;
 	z-index: -1;
@@ -435,7 +435,7 @@
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	background: url("/assets/images/content/img_banner.png") no-repeat center/cover;
+	background: url("../images/content/img_banner.png") no-repeat center/cover;
 }
 .sec-recommend .inner {
 	text-align: center;
@@ -462,7 +462,7 @@
 	        justify-content: center;
 }
 .sec-recommend .btn-wrap .btn-more::after {
-	background: url("/assets/images/common/ico_more_w.png") no-repeat center/cover;
+	background: url("../images/common/ico_more_w.png") no-repeat center/cover;
 }
 @media (max-width: 768px) {
 	.sec-recommend {
