@@ -542,49 +542,49 @@ pre[class*=language-] {
 }
 @font-face {
 	font-family: "Pretendard";
-	src: url("../font/Pretendard-Regular.woff") format("woff");
+	src: url("../fonts/Pretendard-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Pretendard";
-	src: url("../font/Pretendard-Medium.woff") format("woff");
+	src: url("../fonts/Pretendard-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Pretendard";
-	src: url("../font/Pretendard-SemiBold.woff") format("woff");
+	src: url("../fonts/Pretendard-SemiBold.woff") format("woff");
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Pretendard";
-	src: url("../font/Pretendard-Bold.woff") format("woff");
+	src: url("../fonts/Pretendard-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Quattrocento";
-	src: url("../font/Quattrocento-Regular.woff") format("woff");
+	src: url("../fonts/Quattrocento-Regular.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Quattrocento";
-	src: url("../font/Quattrocento-Medium.woff") format("woff");
+	src: url("../fonts/Quattrocento-Medium.woff") format("woff");
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Quattrocento";
-	src: url("../font/Quattrocento-SemiBold.woff") format("woff");
+	src: url("../fonts/Quattrocento-SemiBold.woff") format("woff");
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
 	font-family: "Quattrocento";
-	src: url("../font/Quattrocento-Bold.woff") format("woff");
+	src: url("../fonts/Quattrocento-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
 }
