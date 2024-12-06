@@ -101,6 +101,21 @@
         }
         .menu-list{
             display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 100;
+            background-color: #fff;
+
+            &.active{
+                display: block;
+            }
+
+            .menu-item{
+                strong{
+                    font-size: 18px;
+                }
+            }
         }
     }
 
