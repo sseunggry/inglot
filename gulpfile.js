@@ -14,39 +14,40 @@ const eslint = require("gulp-eslint");
 const includer = require("gulp-html-ssi");
 const newer = require('gulp-newer');
 const cache = require('gulp-cache');
+const replace = require('gulp-replace');
 
 // paths setting
 let paths = {
-    build: "./dist/",
+    build: "./build/",
     scss: {
         src: "./src/assets/scss/**/*",
         ignore: "!./src/assets/scss/_**/*",
-        dest: "./dist/assets/css"
+        dest: "./build/assets/css"
     },
     csscopy: {
         src: "./src/assets/css/plugin/**/*",
-        dest: "./dist/assets/css/plugin"
+        dest: "./build/assets/css/plugin"
     },
     img: {
         src: "./src/assets/images/**/*",
-        dest: "./dist/assets/images"
+        dest: "./build/assets/images"
     },
     js: {
         src: "./src/assets/js/**/*",
-        dest: "./dist/assets/js"
+        dest: "./build/assets/js"
     },
     fonts: {
         src: "./src/assets/fonts/**/*",
-        dest: "./dist/assets/fonts"
+        dest: "./build/assets/fonts"
     },
     video: {
         src: "./src/assets/video/**/*",
-        dest: "./dist/assets/video"
+        dest: "./build/assets/video"
     },
     html: {
         src: "./src/html/**/*",
         ignore: "!./src/html/include",
-        dest: "./dist/html"
+        dest: "./build/"
     }
 }
 
@@ -70,7 +71,7 @@ async function fonts() {
 // Optimize Images
 async function images() {
     return src(paths.img.src, {since: lastRun(images)})
-        .pipe(newer('dist'))
+        .pipe(newer('build'))
         .pipe(cache(imagemin({interlaced: true})))
         .pipe(dest(paths.img.dest))
 }
@@ -141,6 +142,8 @@ async function video() {
 async function htmlssi() {
     return src([paths.html.src, paths.html.ignore])
         .pipe(includer())
+        .pipe(replace('src="/assets/', 'src="./assets/'))
+        .pipe(replace('href="/assets/', 'href="./assets/'))
         .pipe(dest(paths.html.dest))
 }
 
@@ -150,7 +153,7 @@ async function server() {
         server: {
             baseDir: paths.build,
         },
-        startPath: "/html/index.html",
+        startPath: "/index.html",
         port: 3000
     });
 }
