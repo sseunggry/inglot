@@ -9,6 +9,7 @@ const imagemin = require("gulp-imagemin");
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require("autoprefixer");
 const postcss = require("gulp-postcss");
+const pxtorem = require('postcss-pxtorem');
 const sourcemaps = require("gulp-sourcemaps");
 const eslint = require("gulp-eslint");
 const includer = require("gulp-html-ssi");
@@ -21,7 +22,7 @@ let paths = {
     build: "./build/",
     scss: {
         src: "./src/assets/scss/**/*",
-        ignore: "!./src/assets/scss/_**/*",
+        ignore: "!./src/assets/scss/_*",
         dest: "./build/assets/css"
     },
     csscopy: {
@@ -77,20 +78,29 @@ async function images() {
 }
 
 // SCSS task
-var sassOptions = {
+const sassOptions = {
     //outputStyle: "compact",
     indentType: "tab",
     indentWidth: 1,
     precision: 2,
     sourceComments: false
 };
+const postOptions = [
+    autoprefixer(),
+    pxtorem({
+        rootValue: 16, //기준 root 폰트 크기
+        propList: ['*'], //변환할 속성 목록
+        selectorBlackList: [], //변환하지 않을 선택자 목록
+        minPixelValue: 2 //변환할 최소 픽셀 값
+    })
+];
 
 async function scss() {
     return src([paths.scss.src, paths.scss.ignore])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass(sassOptions).on("error", sass.logError))
-        .pipe(postcss([autoprefixer()]))
+        .pipe(postcss(postOptions))
         .pipe(sourcemaps.write("./maps"))
         .pipe(dest(paths.scss.dest))
         .pipe(browserSync.reload({stream: true}))
